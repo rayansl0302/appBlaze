@@ -1,0 +1,177 @@
+<div class="container-fluid">
+   <div class="row">
+    <div class="col">
+        <div class="usuario">
+            <h2> {{ email }} </h2>
+            <button class="btn-deslogar" (click)="sair()">Deslogar</button>
+        </div>
+    </div>
+   </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="table-container">
+                    <h2>Digite as pedras:</h2>
+                    <form>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Minuto</th>
+                                    <th scope="col">Pedra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>xx:01</td>
+                                    <td>
+                                        <select id="pedra1" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <td>xx:02</td>
+                                    <td>
+                                        <select id="pedra2" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:03</td>
+                                    <td>
+                                        <select id="pedra3" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:04</td>
+                                    <td>
+                                        <select id="pedra4" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:05</td>
+                                    <td>
+                                        <select id="pedra5" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:06</td>
+                                    <td>
+                                        <select id="pedra6" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:07</td>
+                                    <td>
+                                        <select id="pedra7" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:08</td>
+                                    <td>
+                                        <select id="pedra8" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:09</td>
+                                    <td>
+                                        <select id="pedra9" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>xx:10</td>
+                                    <td>
+                                        <select id="pedra10" required>
+                                            <option value="">Selecione a Pedra do Minuto</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       <div class="btn">
+                        <button class="btn-calcular" (click)="calcular($event)">Calcular</button>
+                        <button class="btn-apagar" (click)="limparCampos()">Limpar</button>
+                       </div>
+                    </form>
+                </div>
+                <div class="table-container">
+                    <h2>Resultado:</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Jogar no Minuto</th>
+                                <th>A cor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultado">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <h2>Notas Importantes:</h2>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Na coluna de "resultado", é apenas uma POSSIBILIDADE, jogue de forma
+                                        responsável
+                                        analisando sempre antes de entrar, coloque os números veja quantas vezes está
+                                        acertando antes de começar a jogar.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>JOGAR APENAS ATÉ G1,NÃO SOMOS RESPONSÁVEIS PELA SUA BANCA, FAZEMOS APENAS O
+                                        CÁLCULO COM BASE EM PROBABILIDADES, ANALISE BEM ANTES DE JOGAR.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Sempre fazer entradas com a proteção no branco variando com o valor da sua banca,
+                                        banca baixa entre com 0,50 centavos ou R$1,00.
+                                        Porém se vier branco forte, há uma <b><strong>PROBABILIDADE</strong> a maior de vir o branco</b>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="https://old.tipminer.com/blaze/double">Clique aqui para
+                                        acessar
+                                        o site e verificar o histórico do double para preencher corretamente a
+                                        tabela.</a>
+
+                                        <p>Veja a baixo como configurar.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="dicas">
+                            <h2>Dicas Importantes: Como configurar o tipminer para preencher corretamente.</h2>
+                            <p>Configurar no tipminer: Colunas Fixas e quantidade de pedra 2000 para que seja visualizado mais rápido e mais fácil as pedras para preencher.</p>
+                            <p>A cada minuto saem duas pedras, pegar sempre a primeira pedra, conforme a imagem abaixo da hora 13:30 a primeira pedra é 12, minuto 31 a pedra é 10 e assim por diante.</p>
+                         <div class="dicas-content">
+                            <div class="tutorial"></div>
+                            <div class="tutorial-pt2"></div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
