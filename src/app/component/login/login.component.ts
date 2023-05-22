@@ -23,10 +23,12 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-  submitForm(){
-    if(this.loginForm.valid){
-      this.authService.login(this.loginForm.value)
+
+  submitForm() {
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value);
+    } else {
+      alert('Por favor, preencha todos os campos obrigatórios.');
     }
   }
-
 }

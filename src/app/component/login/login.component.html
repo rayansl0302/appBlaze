@@ -3,14 +3,16 @@
   <div class="shape-2"></div>
 </div>
 
-<form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="form">
-  <h3>Assistente de apostas Double Blaze</h3>
+<div class="formarea">
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="form">
+    <h3>Assistente de apostas Double Blaze</h3>
 
-  <label for="username">Usuário</label>
-  <input type="text" placeholder="Digite aqui seu Usuário" id="username" formControlName="username">
+    <label for="username">E-mail</label>
+    <input type="text" placeholder="Digite aqui seu E-mail" id="username" formControlName="username" required>
 
-  <label for="password">Senha</label>
-  <input type="password" placeholder="Digite aqui sua Senha" id="password" formControlName="password">
+    <label for="password">Senha</label>
+    <input type="password" placeholder="Digite aqui sua Senha" id="password" formControlName="password" required>
 
-  <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
-</form>
+    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+  </form>
+</div>

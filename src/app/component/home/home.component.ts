@@ -85,25 +85,29 @@ export class HomeComponent implements OnInit {
         } else if (soma > 14) {
           if (ultimoDigito >= 1 && ultimoDigito <= 7) {
             tr.classList.add('vermelho');
-            tdResultado.textContent = 'Vermelho';
+            tdResultado.textContent = 'Vermelho com branco fraco';
             tdResultado.style.backgroundColor = 'red';
+            tdResultado.style.color = 'white';
             tdResultado.style.textAlign = 'center';
           } else {
             tr.classList.add('preto');
-            tdResultado.textContent = 'Preto';
+            tdResultado.textContent = 'Preto com branco fraco';
             tdResultado.style.backgroundColor = 'black';
+            tdResultado.style.color = 'white';
             tdResultado.style.textAlign = 'center';
           }
         } else {
           tdResultado.textContent = soma.toString();
           if (soma >= 1 && soma <= 7) {
             tr.classList.add('vermelho');
-            tdResultado.textContent = 'Vermelho';
+            tdResultado.textContent = 'Vermelho com branco fraco';
+            tdResultado.style.color = 'white';
             tdResultado.style.textAlign = 'center';
             tdResultado.style.backgroundColor = 'red';
           } else {
             tr.classList.add('preto');
-            tdResultado.textContent = 'Preto';
+            tdResultado.textContent = 'Preto  com branco fraco';
+            tdResultado.style.color = 'white';
             tdResultado.style.backgroundColor = 'black';
             tdResultado.style.textAlign = 'center';
           }

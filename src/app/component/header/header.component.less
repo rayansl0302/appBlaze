@@ -1,0 +1,115 @@
+.usuario {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #fff;
+    padding: 8px;
+
+    h2 {
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+
+    .btn {
+        height: 20px;
+        background-color: transparent;
+        border: none;
+
+        svg {
+            filter: invert(1);
+            width: 35px;
+            height: 35px;
+        }
+
+    }
+}
+
+nav {
+    border-bottom: white 1px solid;
+}
+
+.navbar {
+    background: linear-gradient(#000, rgba(235, 44, 73, 0.938));
+    height: 100px;
+
+    .nav-item {
+        font-size: 20px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .navbar-brand {
+        img {
+            width: 250px;
+        }
+    }
+
+    .navbar-toggler {
+        filter: invert(1);
+    }
+
+    .dropdown {
+        a {
+            color: #000;
+        }
+    }
+
+}
+
+
+.dicas-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    h3 {
+        font-weight: 800;
+        width: 100%;
+    }
+
+    .tutorial {
+        background-image: url('../../../assets/img/tutorial.png');
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .tutorial-pt2 {
+        margin-top: 50px;
+        background-image: url('../../../assets/img/tutorial-pt2.png');
+        width: 100%;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+//breakpoints
+@media (max-width: 870px) {
+    .container-fluid {
+        padding: 0px !important;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+
+    .navbar-collapse {
+        margin-top: -5px;
+        background: linear-gradient(rgba(235, 44, 73, 0.938), #000);
+
+        a {
+            margin-top: 10px;
+            text-align: center;
+            height: 50px;
+        }
+    }
+
+    .usuario {
+        justify-content: space-between;
+        border-top: 1px solid #ffffff72;
+    }
+}

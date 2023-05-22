@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class="navbar-brand" href="#"><img src="../../../assets/img/logo-bla.png" alt="logo"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer;" target="_blank" data-bs-toggle="modal"
+                        data-bs-target="#comojogar">Como jogar?</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a style="color:#fff;" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Old Tip Miner
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="https://old.tipminer.com/blaze/double">Clique
+                                aqui para
+                                acessar</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a style="cursor:pointer;" class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">O que é ? E como configurar?</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <div class="usuario d-flex">
+                <h2> {{ email }} </h2>
+                <button class="btn" (click)="sair()"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">O Old Tip Miner</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Serve para ajudar a preencher corretamente as pedras com os minutos, para que não haja erros, deixamos o
+                link com imagens com instruções
+                <hr>
+                Configurar no tipminer: <br> <strong>Colunas Fixas</strong> e <strong>Quantidade de
+                    rodadas:2000</strong>
+                para que seja visualizado mais rápido e mais fácil as pedras para preencher. <br><br>
+                A cada minuto saem duas pedras, <strong>pegar sempre a primeira pedra</strong>, conforme a imagem abaixo
+                da hora 13:30 a
+                <strong>primeira pedra é 12</strong>, minuto 31 a <strong>pedra é 10</strong> e assim por diante. <br>
+                <hr>
+                <div class="dicas-content">
+                    <h2>Passo a Passo</h2>
+                    <h3>Primeiro Passo</h3>
+                    <div class="tutorial"></div>
+                    <h3>Segundo Passo</h3>
+                    <p>conforme a imagem abaixo no horário de 13:30 a primeira pedra é 12, minuto 31 a pedra é 10 e
+                        assim por
+                        diante. <br></p>
+                    <div class="tutorial-pt2"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="comojogar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Como jogar usando o Assistente e o Old Tip Miner?
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Clique no play e assista para aprender como jogar usando o Assitente, o Old Tip Miner e confira
+                    também o resultado com base no horário utilizado no vídeo.</p>
+                <iframe width="100%" height="409" src="https://www.youtube.com/embed/dzTSIvwvrp0"
+                    title="Como usar o Assistente Double e o Old tip miner" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

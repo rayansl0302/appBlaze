@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   get logado(): boolean {
-    const usuarioLogado = localStorage.getItem('user');
+    const usuarioLogado = JSON.parse(localStorage.getItem('user')!);
     return usuarioLogado !== null ? true : false;
   }
 
@@ -29,12 +29,17 @@ export class AuthService {
           this.router.navigate(['home'])
         }
       })
-    }).catch((error:any)=>{
-      console.log(error)
-    })
-    
-
-  }
+    }) .catch((error: any) => {
+      if (error.code === 'auth/wrong-password') {
+        alert('Senha incorreta. Por favor, verifique a senha e tente novamente.');
+      } else if (error.code === 'auth/invalid-email' || error.code === 'auth/user-not-found') {
+        alert('Email inválido ou não encontrado.');
+      } else {
+        alert('Ocorreu um erro durante o login. Por favor, tente novamente mais tarde.');
+      }
+      console.log(error);
+    });
+}
   logout(){
     this.afAuth.signOut().then(() => {
       this.router.navigate(['login'])

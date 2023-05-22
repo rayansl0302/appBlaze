@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 10px;
-    color: #fff;
+    color: #000;
+
 }
 
 .table-container {
@@ -26,15 +27,16 @@ table {
 
 th,
 td {
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #000;
+    color: #000;
     text-align: center;
 
 }
 
 th {
-    background-color: #555;
-    color: white;
+    background-color: rgba(235, 44, 73, 0.938);
+    color: #fff;
+    ;
 }
 
 tr {
@@ -60,16 +62,18 @@ form {
 form table {
     margin: 0 auto;
 }
-.usuario{
+
+.usuario {
     margin-top: 10px;
     position: absolute;
     right: 0;
     margin-right: 10px;
-    color: #fff;
+    color: #000;
     border: solid 1px;
     padding: 8px;
+
     .btn-deslogar {
-  
+
         margin-top: 10px;
         width: 150px;
         height: 40px;
@@ -80,33 +84,35 @@ form table {
         border: none;
         cursor: pointer;
         transition: background 0.3s;
-    
+
         &:hover {
             background: #828282;
         }
     }
 }
 
-.btn{
+.btn {
     display: flex;
     flex-direction: row;
     gap: 5px;
+
     .btn-calcular {
         margin-top: 10px;
         width: 150px;
         height: 40px;
         font-size: 20px;
         color: white;
-        background: #00ff48;
+        background: #404040;
         border-radius: 5px;
         border: none;
         cursor: pointer;
         transition: background 0.3s;
-    
+
         &:hover {
-            background: #227919;
+            background: #000000;
         }
     }
+
     .btn-apagar {
         margin-top: 10px;
         width: 150px;
@@ -118,12 +124,13 @@ form table {
         border: none;
         cursor: pointer;
         transition: background 0.3s;
-    
+
         &:hover {
             background: #5e1717;
         }
     }
 }
+
 .oculto {
     visibility: hidden;
 }
@@ -137,45 +144,21 @@ a {
         color: #fff;
         text-decoration: uppercase;
         cursor: pointer;
-        transition:  0.8s;
+        transition: 0.8s;
 
     }
 }
 
-#resultado{
-    color: #fff;
+#resultado {
+    text-align: center;
 }
-.banner-lat{
+
+.banner-lat {
     margin-top: 50px;
-   background-image: url('../../../assets/img/Atomica Sound Lab.png');
-   width: 350px;
-   height: 500px;
-   background-size: contain;
+    background-image: url('../../../assets/img/Atomica-Sound-Lab.png');
+    width: 350px;
+    height: 500px;
+    background-size: contain;
     background-repeat: no-repeat;
-}
-.dicas{
-    color: #fff;
-    margin-top: 20px;
-    .dicas-content{
-        display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    .tutorial{
-        margin-top: 50px;
-        background-image: url('../../../assets/img/tutorial.png');
-        width: 350px;
-        height: 500px;
-        background-size: contain;
-         background-repeat: no-repeat;
-    }
-    .tutorial-pt2{
-        margin-top: 50px;
-        background-image: url('../../../assets/img/tutorial-pt2.png');
-        width: 60%;
-        height: 500px;
-        background-size: contain;
-         background-repeat: no-repeat;
-    }
-    }
-  
+    margin-left: 5%;
 }
