@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTableModule } from '@angular/material/table';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/compat/auth-guard';
@@ -13,13 +13,16 @@ import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './component/header/header.component';
+import { SegundaformaComponent } from './component/segundaforma/segundaforma.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SegundaformaComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { HeaderComponent } from './component/header/header.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireAuthGuardModule
+    AngularFireAuthGuardModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

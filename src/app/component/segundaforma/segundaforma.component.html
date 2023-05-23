@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Previsão de Entrada com Base no Minuto 00 De Cada Horário</h1>
+            <label for="number1">Número da segunda pedra do minuto 00:</label>
+            <select class="form-select" id="number1" [(ngModel)]="number1">
+                <option *ngFor="let option of dropdownOptions1" [ngValue]="option">{{ option }}</option>
+            </select>
+            <br>
+            <label for="number2">Escolha a dezena do minuto 00:</label>
+            <select class="form-select" id="number2" [(ngModel)]="number2">
+                <option *ngFor="let option of dropdownOptions2" [ngValue]="option">{{ option }}</option>
+            </select>
+            <br>
+            <div class="btn">
+                <button class="btn-calcular" (click)="calculateColor()">Resultado</button>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="col-md-6">
+            <div class="resultados-single">
+                <h2>Resultado para a entrada:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Minuto</th>
+                            <th>Cor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let result of results">
+                            <td>{{ result.minute }}</td>
+                            <td [style.backgroundColor]="result.color === 'Preto e Branco' ? 'black' : 'red'"
+                                [style.color]="'white'">{{
+                                result.color }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+            <div class="btn">
+                <button class="btn-apagar" (click)="clearTable()">Apagar</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2 style="font-size:35px;">Notas Importantes:</h2>
+            <div class="exemplo">
+                <p style="font-size: 20px;">Quando a <strong>segunda pedra</strong> Minuto 00 for o <strong>Branco
+                        0</strong> ou a
+                    <strong>Pedra 10 Preta</strong> , não
+                    se deve jogar, tem que
+                    aguardar o próximo horário e realizar a entrada.
+                </p>
+                <p style="font-size: 20px;">Exemplo, como a imagem abaixo que na segunda pedra do minuto 00 na dezena 20
+                    veio <b> BRANCO 0</b> e <br> na
+                    segunda pedra do minuto 00 na dezena 30 veio <b> PRETO 10</b></p>
+                <img src="../../../assets/img/exceções.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

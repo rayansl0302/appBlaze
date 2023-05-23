@@ -133,8 +133,5 @@ export class HomeComponent implements OnInit {
       resultado.innerHTML = '';
     }
   }
-  sair(){
-    this.authService.logout()
-  }
 
 }
