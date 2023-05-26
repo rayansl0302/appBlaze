@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Escolha as pedras dos minutos xx:00, xx:03, xx:06, xx:09:</h2>
+            <table>
+                <tr>
+                    <th>Horário</th>
+                    <th>Primeira Pedra</th>
+                    <th>Segunda Pedra</th>
+                </tr>
+                <tr *ngFor="let result of results; let i = index">
+                    <td>{{ result.horario }}</td>
+                    <td>
+                        <select class="form-select" [(ngModel)]="result.primeiraPedra" id="input-{{i}}-primeira">
+                            <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-select" [(ngModel)]="result.segundaPedra" id="input-{{i}}-segunda">
+                            <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="btn">
+                <button class="btn-calcular" (click)="calculateResults()">Resultados</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Entrar nos próximos 10 min:</h2>
+            <table class="result-table">
+                <tr>
+                    <th>Horário</th>
+                    <th>Cor</th>
+                </tr>
+                <tr *ngFor="let result of results">
+                    <td>{{ result.horario }}</td>
+                    <td [ngClass]="getResultColor(result)">
+                        {{ getCorTexto(result) }}
+                    </td>
+                </tr>
+                <tr *ngIf="results.length === 0">
+                    <td colspan="2">Nenhum resultado disponível</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Notas importantes:</h2>
+            <h3>O método só funciona para os minutos específicos acima, não é CERTEZA e sim
+                <strong>PROBABILIDADE</strong>
+            </h3>
+            <h3>Se estiver preenchendo com o horário de 07:00 por exemplo o resultado vai ser para entrada de 07:10 até
+                07:19</h3>
+            <h3>Se estiver preenchendo com o horário de 15:00 por exemplo o resultado vai ser para entrada de 15:10
+                até 15:19</h3>
+            <h3>Conforme os exemplos acima preencha as pedras e lucre com uma maior assertividade</h3>
+        </div>
+    </div>
+</div>

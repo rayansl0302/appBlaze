@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './component/header/header.component';
 import { SegundaformaComponent } from './component/segundaforma/segundaforma.component';
 import { CommonModule } from '@angular/common';
+import { TerceiraformaComponent } from './component/terceiraforma/terceiraforma.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    SegundaformaComponent
+    SegundaformaComponent,
+    TerceiraformaComponent
   ],
   imports: [
     BrowserModule,
